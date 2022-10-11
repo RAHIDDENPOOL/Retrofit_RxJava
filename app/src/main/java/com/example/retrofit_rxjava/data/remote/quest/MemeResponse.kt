@@ -1,25 +1,23 @@
 package com.example.retrofit_rxjava.data.remote.quest
 
+import com.example.retrofit_rxjava.data.remote.common.RemoteListItem
 import com.google.gson.annotations.SerializedName
 
-data class MemeResponse(val memes: List<MemesListItem>)
+data class MemeResponse(val items: List<QuestListItem>)
 
-data class MemesListItem(
-    @SerializedName("memeId")
-    val memeId: String,
+data class QuestListItem(
+    @SerializedName("questId")
+    val questId: String,
 
-    @SerializedName("memeName")
-    val memeName: String,
+    @SerializedName("questName")
+    val name: String,
 
-    @SerializedName("memeUrl")
-    val memeUrl: String,
+    @SerializedName("questSubtitle")
+    val subtitle: String,
 
-    @SerializedName("memeWidth")
-    val memeWidth: String,
+    @SerializedName("questImage")
+    val image: String,
 
-    @SerializedName("memeHeight")
-    val memeHeight: String,
-
-    @SerializedName("memeBox_count")
-    val memeBox_count: String
+    @SerializedName("description")
+    val items: List<RemoteListItem>
 )

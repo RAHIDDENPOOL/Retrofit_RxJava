@@ -1,4 +1,4 @@
-package com.example.retrofit_rxjava
+package com.example
 
 import android.app.Application
 import android.util.Log
@@ -26,7 +26,7 @@ class QuestApp : Application() {
             .build()
 
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://api.imgflip.com/get_memes/")
+            .baseUrl("https://questgo.getsandbox.com")
             .client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create())
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
